@@ -10,3 +10,4 @@ todo task:
 4. adding to the cards like the numbers and shapes
 5. touch up with the javascript so everything functions well when we flip a random card and so it only flips one and not all the cards
 6. shuffle function 
+
