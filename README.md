@@ -10,3 +10,10 @@ todo task:
 4. adding to the cards like the numbers and shapes
 5. touch up with the javascript so everything functions well when we flip a random card and so it only flips one and not all the cards
 6. shuffle function 
+
+
+# Darian, Sophie, and Akhil
+todo tasks:
+4/17 around 2:15pm
+1. create a way to randomly select & deal two cards to the player and then again to the dealer
+2. State management of the deck
