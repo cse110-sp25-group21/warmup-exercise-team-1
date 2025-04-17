@@ -1,5 +1,5 @@
 # warmup-exercise-team-1
-# tommy, mohan, and akhil  
+# tommy and mohan
 
 todo task:
 4/16 around 9 pm:
