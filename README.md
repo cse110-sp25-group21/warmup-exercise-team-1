@@ -14,7 +14,7 @@ todo task:
 
 # Darian, Sophie, and Akhil
 todo tasks:
-4/17 around 2:15pm
+4/17 around 2pm
 1. create a way to randomly select cards --DONE
 2. Deal two cards to the player and then again to the dealer --DONE
 3. State management of the deck --DONE
