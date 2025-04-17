@@ -15,6 +15,9 @@ todo task:
 # Darian, Sophie, and Akhil
 todo tasks:
 4/17 around 2:15pm
-1. create a way to randomly select & deal two cards to the player and then again to the dealer
-2. State management of the deck
-3. add a way to unflip a flipped card -- DONE
+1. create a way to randomly select cards --DONE
+2. Deal two cards to the player and then again to the dealer --DONE
+3. State management of the deck --DONE
+4. add a way to unflip a flipped card -- DONE
+5. Function to deal another card
+6. Function to end player phase
