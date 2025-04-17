@@ -17,3 +17,4 @@ todo tasks:
 4/17 around 2:15pm
 1. create a way to randomly select & deal two cards to the player and then again to the dealer
 2. State management of the deck
+3. add a way to unflip a flipped card -- DONE
