@@ -12,8 +12,15 @@ document.querySelectorAll(".card").forEach((card) => {
   });
 });
 
+// Shuffle listener
+document.getElementById("shuf-btn").onclick = function() {
+  shuffleCards();
+  alert("shuffle successfully");
+}
+
 // Deal listener
 document.getElementById("deal-btn").onclick = function() {
+  getRandomCard(currentDeck);
   alert("deal");
 }
 
@@ -43,6 +50,18 @@ function createDeck() {
 }
 
 /**
+ * Shuffle Elements under certain container on the frontend (#SUBJECT TO CHANGE)
+ * @return void
+ */
+function shuffleCards() {
+  var five_two_container = document.getElementById("five_two_cards");
+  var cards = five_two_container.children;
+  for (var i = cards.length; i >= 0; i--) {
+    five_two_container.appendChild(cards[Math.random() * i | 0]);
+  }
+}
+
+/**
  * Deals one random card and removes it from deck
  * @return Dealed card 
  */
@@ -52,6 +71,7 @@ function getRandomCard(deck){
   deck.splice(i, 1);
   return randCard;
 }
+
 /**
  * Creates deck and deals player and dealer cards
  * @return void
@@ -102,3 +122,6 @@ function resetBoard(){
   dealer = [];
   currentDeck = createDeck();
 }
+
+// Execution
+startGame();
