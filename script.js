@@ -210,14 +210,19 @@ function calcHandValue(user) {
  * If dealer's hand is less than 17, they continue to hit (draw a card) until they reach 17 or more
  * If dealer's hand is over 21, they bust
  * If dealer's hand is between 17 and 21, they stand (stop drawing cards)
+ * After dealer actions, the hands are compared to determine the winner
+ * If player has higher hand value than dealer, player wins and gets double their bet
+ * 
  */
 function dealerActions() {
+  dealerBusted = false;
   while (calcHandValue(dealer) < 17) {
     const deltCard = getRandomCard(currentDeck);
     dealer.push(deltCard);
     renderCard(deltCard, "dealer-hand");
 
     if (calcHandValue(dealer) > 21) {
+      dealerBusted = true;
       break;
     }
     if (calcHandValue(dealer) > 16 && calcHandValue(dealer) <= 21) {
@@ -226,9 +231,7 @@ function dealerActions() {
   }
 
   // Compare hands after dealer actions
-  if (
-    (calcHandValue(player) > calcHandValue(dealer) && calcHandValue(player) <= 21) || calcHandValue(dealer) > 21
-  ) {
+  if ((calcHandValue(player) > calcHandValue(dealer) && calcHandValue(player) <= 21) || calcHandValue(dealer) > 21) {
     balance += currentBet * 2; //player wins, adds double their bet
     if (dealerBusted == true) {
       alert("Dealer busted! You win!");
@@ -236,11 +239,7 @@ function dealerActions() {
       alert("You win!");
     }
     document.getElementById("player-balance").textContent = balance.toString(); //update balance display
-  } else if (
-    (calcHandValue(player) < calcHandValue(dealer) &&
-      calcHandValue(dealer) <= 21) ||
-    calcHandValue(player) > 21
-  ) {
+  } else if ((calcHandValue(player) < calcHandValue(dealer) && calcHandValue(dealer) <= 21) || calcHandValue(player) > 21) {
     balance; //dealer wins, player loses bet amount, which was already subtracted from balance
     document.getElementById("player-balance").textContent = balance.toString(); //update balance
     alert("Dealer wins");

@@ -21,3 +21,11 @@ todo tasks:
 4. [x] add a way to unflip a flipped card -- DONE
 5. [ ] Function to deal another card
 6. [ ] Function to end player phase
+
+# Darian, Sophie, and Akhil
+todo tasks:
+4/19 around 4 pm
+1. [x] Create board --Done
+2. [x] Deal 2 cards --Done
+3. [x] Hit, stand and start game buttons --Done
+4. [x] Create the flippable cards
