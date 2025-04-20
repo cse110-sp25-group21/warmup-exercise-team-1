@@ -28,4 +28,4 @@ todo tasks:
 1. [x] Create board --Done
 2. [x] Deal 2 cards --Done
 3. [x] Hit, stand and start game buttons --Done
-4. [x] Create the flippable cards
+4. [ ] Create the flippable cards 

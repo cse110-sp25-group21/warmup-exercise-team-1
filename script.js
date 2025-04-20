@@ -212,7 +212,8 @@ function calcHandValue(user) {
  * If dealer's hand is between 17 and 21, they stand (stop drawing cards)
  * After dealer actions, the hands are compared to determine the winner
  * If player has higher hand value than dealer, player wins and gets double their bet
- * 
+ * If dealer has higher hand value than player, dealer wins and player loses their bet
+ * If both hands are equal, it is a tie and the player's bet is returned
  */
 function dealerActions() {
   dealerBusted = false;
