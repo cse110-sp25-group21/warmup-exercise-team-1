@@ -38,13 +38,20 @@ document.getElementById("hit").onclick = function () {
   const deltCard = getRandomCard(currentDeck);
   player.push(deltCard);
   renderCard(deltCard, "player-hand");
+  updateHandValueDisplay();
 
   if (calcHandValue(player) > 21) {
     alert("You busted! Dealer wins.");
     document.getElementById("hit").disabled = true;
+    document.getElementById("stand").disabled = true;
     document.getElementById("place-bet+").disabled = false;
   }
 };
+
+function updateHandValueDisplay() {
+  document.getElementById("player-hand-val").textContent = `${calcHandValue(player)}`; // Update player hand value display
+  document.getElementById("dealer-hand-val").textContent = `${calcHandValue(dealer)}`; // Update dealer hand value display
+}
 
 //stand listener
 document.getElementById("stand").onclick = function () {
@@ -159,6 +166,8 @@ function startGame() {
       renderCard(temp, "dealer-hand");
     }
   }
+  
+  updateHandValueDisplay();
 
   if (calcHandValue(player) == 21) {
     alert("Blackjack! You win!");
@@ -221,6 +230,7 @@ function dealerActions() {
     const deltCard = getRandomCard(currentDeck);
     dealer.push(deltCard);
     renderCard(deltCard, "dealer-hand");
+    updateHandValueDisplay();
 
     if (calcHandValue(dealer) > 21) {
       dealerBusted = true;

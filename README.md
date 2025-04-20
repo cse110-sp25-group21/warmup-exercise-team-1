@@ -25,7 +25,10 @@ todo tasks:
 # Darian, Sophie, and Akhil
 todo tasks:
 4/19 around 4 pm
-1. [x] Create board --Done
-2. [x] Deal 2 cards --Done
-3. [x] Hit, stand and start game buttons --Done
-4. [ ] Create the flippable cards 
+1. [x] Create board
+2. [x] Deal 2 cards
+3. [x] Hit, stand and start game buttons
+4. [x] Implement Blackjack logic and gameplay
+5. [ ] Create the flippable cards 
+6. [ ] Doing alert after UI update
+7. [ ] Fix bug where player/dealer getting blackjack causes a dead end bug
