@@ -1,5 +1,9 @@
 //Player balance
 let balance = Number(document.getElementById("player-balance").textContent);
+let currentBet = 0;
+let currentDeck = [];
+let player = [];
+let dealer = [];
 
 // Card Definitions
 const suits = ["♣", "♠", "♥", "♦"];
@@ -63,7 +67,7 @@ document.getElementById("stand").onclick = function () {
 // Reset listener
 document.getElementById("rest-btn").onclick = function () {
   resetBoard();
-  alert("reset");
+  alert("game has been reset");
 };
 
 // Place Bet listener
@@ -75,17 +79,14 @@ document.getElementById("place-bet+").addEventListener("click", () => {
 });
 
 function placeBet() {
-  let betInput = document.getElementById("bet-input");
-  const amt = Number(betInput.value);
-  if (amt > balance) {
-    alert("Invalid Bet");
+  const amt = Number(document.getElementById("bet-input").value);
+  if (amt > balance || amt <= 0) {
+    alert("invalid bet");
     return false;
   }
-
   currentBet = amt;
   balance -= amt;
-  document.getElementById("player-balance").textContent = balance.toString(); //update balance
-
+  document.getElementById("player-balance").textContent = balance; //update balance
   startGame();
   return true;
 }
@@ -150,26 +151,24 @@ function renderCard(card, hand) {
 function startGame() {
   player = [];
   dealer = [];
-  handVal = 0;
   document.getElementById("player-hand").replaceChildren();
   document.getElementById("dealer-hand").replaceChildren();
   currentDeck = createDeck();
-  document.getElementById("place-bet+").disabled = false;
 
   for (let i = 0; i < 4; i++) {
-    const temp = getRandomCard(currentDeck);
+    const card = getRandomCard(currentDeck);
     if (i < 2) {
-      player.push(temp);
-      renderCard(temp, "player-hand");
+      player.push(card);
+      renderCard(card, "player-hand");
     } else {
-      dealer.push(temp);
-      renderCard(temp, "dealer-hand");
+      dealer.push(card);
+      renderCard(card, "dealer-hand");
     }
   }
   
   updateHandValueDisplay();
 
-  if (calcHandValue(player) == 21) {
+  if (calcHandValue(player) === 21) {
     alert("Blackjack! You win!");
     balance += currentBet * 2.5; // Blackjack pays 3:2
     document.getElementById("player-balance").textContent = balance.toString();
@@ -268,7 +267,16 @@ function dealerActions() {
 function resetBoard() {
   //reset balance
   balance = 1000; //reset to starting balance
+  currentBet = 0;
+  currentDeck = [];
+  player = [];
+  dealer = [];
+
+  document.getElementById("player-hand").replaceChildren();
+  document.getElementById("dealer-hand").replaceChildren();
   document.getElementById("player-balance").textContent = balance.toString();
+  document.getElementById("player-hand-val").textContent = "0";
+  document.getElementById("dealer-hand-val").textContent = "0";
   document.getElementById("stand").disabled = false;
   document.getElementById("hit").disabled = false;
   document.getElementById("place-bet+").disabled = false;
