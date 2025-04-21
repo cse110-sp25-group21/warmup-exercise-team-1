@@ -4,13 +4,14 @@
 ## We split our team in half with the team: Tommy, Akhil, Sophie, Darian, and Mohan working in this repository and Charlotte, Ryan, Edison, Vijay, and Chester working in another repository. We are submitting this repo for the assignment. 
 
 ## Links
-### The link to our submission: https://cse110-sp25-group21.github.io/warmup-exercise-team-1/
+### The link to our submission: https://cse110-sp25-group21.github.io/warmup-exercise/
 ### The link to other team's repo: https://github.com/cse110-sp25-group21/warmup-exercise-team-2
+### Youtube link: https://youtu.be/h49_mVFWTks
 
 
 
-# tommy and mohan
-
+#### From half of the team: Mohan, Tommy, Darian, Sophie and Akhil
+### Mohan and Tommy
 todo task:
 4/16 around 9 pm:
 - me and mohan are doing stage 1
@@ -22,7 +23,7 @@ todo task:
 6. [x] shuffle function 
 
 
-# Darian, Sophie, and Akhil
+### Darian, Sophie, and Akhil
 todo tasks:
 4/17 around 2pm
 1. [x] create a way to randomly select cards --DONE
@@ -32,7 +33,7 @@ todo tasks:
 5. [ ] Function to deal another card
 6. [ ] Function to end player phase
 
-# Darian, Sophie, and Akhil
+### Darian, Sophie, and Akhil
 todo tasks:
 4/19 around 4 pm
 1. [x] Create board
