@@ -48,7 +48,7 @@ document.getElementById("hit").onclick = function () {
     alert("You busted! Dealer wins.");
     document.getElementById("hit").disabled = true;
     document.getElementById("stand").disabled = true;
-    document.getElementById("place-bet+").disabled = false;
+    document.getElementById("place-bet").disabled = false;
   }
 };
 
@@ -71,9 +71,9 @@ document.getElementById("rest-btn").onclick = function () {
 };
 
 // Place Bet listener
-document.getElementById("place-bet+").addEventListener("click", () => {
+document.getElementById("place-bet").addEventListener("click", () => {
   if (!placeBet()) return;
-  document.getElementById("place-bet+").disabled = true;
+  document.getElementById("place-bet").disabled = true;
   document.getElementById("hit").disabled = false;
   document.getElementById("stand").disabled = false;
 });
@@ -174,14 +174,14 @@ function startGame() {
     document.getElementById("player-balance").textContent = balance.toString();
     document.getElementById("hit").disabled = true;
     document.getElementById("stand").disabled = true;
-    document.getElementById("place-bet+").disabled = false;
+    document.getElementById("place-bet").disabled = false;
   }
 
   if (calcHandValue(dealer) == 21) {
     alert("Dealer has Blackjack! You lose.");
     document.getElementById("hit").disabled = true;
     document.getElementById("stand").disabled = true;
-    document.getElementById("place-bet+").disabled = false;
+    document.getElementById("place-bet").disabled = false;
   }
 }
 
@@ -258,7 +258,7 @@ function dealerActions() {
     document.getElementById("player-balance").textContent = balance.toString(); //update balance display
     alert("Tie");
   }
-  document.getElementById("place-bet+").disabled = false;
+  document.getElementById("place-bet").disabled = false;
 }
 
 /**
@@ -279,6 +279,6 @@ function resetBoard() {
   document.getElementById("dealer-hand-val").textContent = "0";
   document.getElementById("stand").disabled = false;
   document.getElementById("hit").disabled = false;
-  document.getElementById("place-bet+").disabled = false;
+  document.getElementById("place-bet").disabled = false;
   document.getElementById("bet-input").value = ""; //reset bet input
 }
