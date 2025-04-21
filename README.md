@@ -1,4 +1,14 @@
-# warmup-exercise-team-1
+# warmup-exercise team 21
+## Stage 3 is fully showcased in the Blackjack branch. Stages 1 and 2 can be found in our commits on the main branch. We are submitting this project using the Blackjack branch.
+
+## We split our team in half with the team: Tommy, Akhil, Sophie, Darian, and Mohan working in this repository and Charlotte, Ryan, Edison, Vijay, and Chester working in another repository. We are submitting this repo for the assignment. 
+
+## Links
+### The link to our submission: https://cse110-sp25-group21.github.io/warmup-exercise-team-1/
+### The link to other team's repo: https://github.com/cse110-sp25-group21/warmup-exercise-team-2
+
+
+
 # tommy and mohan
 
 todo task:
